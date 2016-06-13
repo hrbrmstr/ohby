@@ -2,11 +2,22 @@
 output: rmarkdown::github_document
 ---
 
-`ohby` : ...
+`ohby` : R interface to the "ohby" URL / content shortener
+
+Ref: <https://0x.co/hnfaq.html>
+
+What is "oh by" ? What do I do here ?
+
+"oh by" is a simple primitive that you can use to condense information.
+
+It is, sort of, a combination of a pastebin-style site and a URL shortener.
+
+The real utility are the easily recognizable codes, prefixed with "0x".
 
 The following functions are implemented:
 
-The following data sets are included:
+- `shorten()` : um…shorten stuff
+- `expand()` : um…expand stuff
 
 ### Installation
 
@@ -26,6 +37,13 @@ library(ohby)
 # current verison
 packageVersion("ohby")
 
+(one <- shorten("http://rud.is/b"))
+
+(two <- shorten("The quick, brown fox jumps over the lazy dog"))
+
+(expand(one$url))
+
+(expand(two$url))
 ```
 
 ### Test Results
